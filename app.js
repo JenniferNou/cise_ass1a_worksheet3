@@ -1,7 +1,10 @@
 // app.js
 
 const express = require('express');
+const mongoose = require('mongoose');
 const connectDB = require('./config/db');
+const bodyParser = require("body-parser");
+
 var cors = require('cors');
 
 // routes
@@ -30,11 +33,11 @@ const port = process.env.PORT || 8082;
 const path = require("path");
 
 // Step 1:
-app.use(express.static(path.resolve(__dirname, "./my-app/build")));
+app.use(express.static(path.resolve(__dirname, "./my-app/public")));
 
 // Step 2:
 app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./my-app/build", "index.html"));
+  response.sendFile(path.resolve(__dirname, "./my-app/public", "index.html"));
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
