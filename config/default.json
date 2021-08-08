@@ -1,0 +1,4 @@
+{
+    "mongoURI":
+        "mongodb+srv://test:test@worksheet3.owkhd.mongodb.net/worksheet3?retryWrites=true&w=majority"
+}
