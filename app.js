@@ -37,7 +37,7 @@ app.use(express.static(path.resolve(__dirname, "./my-app/build")));
 
 // Step 2:
 app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./my-app/public", "index.html"));
+  response.sendFile(path.resolve(__dirname, "./my-app/build", "index.html"));
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
